@@ -1,12 +1,35 @@
+import { m } from "../utlis/checkers"
 describe('Verify that site must be opened',()=>{
-    it('Verify that site must be opened',()=>{//Test for verify the website is opened or not
-        cy.visit('https://www.gamesforthebrain.com/game/checkers/')//visit the website
+    it('Verify that site must be opened',()=>{
+        cy.visit('https://www.gamesforthebrain.com/game/checkers/')
         cy.url().should('include','https://www.gamesforthebrain.com/game/checkers/')
         cy.get('h1').should('have.text','Checkers')
-        //verify that table is visible
-        //it('verify the table is visible',()=>{
             cy.get('.boardWrapper').should('be.visible')
-            cy.get('[name="space62"]').click().should('have.attr', 'src', 'you2.gif')
+            cy.move('62','73')
+            cy.move('22','13')
+            cy.move('71','62')
+            cy.move('42','24')
+            cy.move('31','22')
+            cy.move('51','33')
+            cy.move('13',"04")
+            cy.move('02','13')
+            cy.move('04','15')
+            cy.move('13','04')
+            cy.move('22','13')
+            cy.move('11','33')
+            cy.move('00','11')
+            cy.move('11','22')
+            cy.move('33','44')
+            cy.move('20','02')
+            cy.move('73','64')
+            cy.move('64','75')
+            cy.move('15','26')
+            cy.move('13','24')
+            cy.move('02','24')
+            cy.move('04','15')
+            cy.move('15','26')
+            cy.move('26','37')
+            /*cy.get('[name="space62"]').click().should('have.attr', 'src', 'you2.gif')
             cy.get('[name="space73"]').click().should('be.visible').should('have.attr', 'src', 'you1.gif')
             cy.wait(3000)
             //expect($el).to.have.value('test@dev.com')
@@ -77,6 +100,6 @@ describe('Verify that site must be opened',()=>{
             cy.get('[name="space26"]').click()
             cy.wait(3000)
             cy.get('[name="space26"]').click()
-            cy.get('[name="space37"]').click().should('have.attr', 'src', 'you1k.gif')
+            cy.get('[name="space37"]').click().should('have.attr', 'src', 'you1k.gif')*/
 })
 })
