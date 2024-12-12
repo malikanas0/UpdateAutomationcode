@@ -1,4 +1,5 @@
-import { m } from "../utlis/checkers"
+
+import { m } from "../../utlis/ckeckers"
 describe('Verify that site must be opened',()=>{
     it('Verify that site must be opened',()=>{
         cy.visit('https://www.gamesforthebrain.com/game/checkers/')
